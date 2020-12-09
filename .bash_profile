@@ -35,8 +35,12 @@ if type _git &> /dev/null; then
     complete -o default -o nospace -F _git g;
 fi;
 
+# Init pyenv every time you open your prompt,
+if command -v pyenv 1>/dev/null 2>&1; then
+  eval "$(pyenv init -)"
+fi
 
 
-# Install Homebrew -> brew install git bash-completion
-source /usr/local/etc/bash_completion.d/git-completion.bash
-GIT_PS1_SHOWDIRTYSTATE=true
+# DEPRECATED Install Homebrew -> brew install git bash-completion
+#source /usr/local/etc/bash_completion.d/git-completion.bash
+#GIT_PS1_SHOWDIRTYSTATE=true

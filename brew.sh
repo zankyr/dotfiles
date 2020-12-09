@@ -46,5 +46,22 @@ brew install git
 brew install git-lfs
 brew install tree
 
+# Install IntelliJ
+brew install --cask intellij-idea
+
+# Install maven
+brew install maven
+
+# Install docker desktop
+brew install --cask docker
+
+# Install openjdk 8
+brew install --cask adoptopenjdk8
+
+# Install pyenv, python and set it
+brew install pyenv
+pyenv install 3.9.0
+pyenv global 3.9.0
+
 # Remove outdated versions from the cellar.
 brew cleanup

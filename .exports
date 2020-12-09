@@ -1,4 +1,4 @@
-
+	
 #!/usr/bin/env bash
 
 # Heavily inspired by https://github.com/mathiasbynens/dotfiles/blob/main/.exports
@@ -17,3 +17,11 @@ export LESS_TERMCAP_md="${yellow}";
 
 # Don’t clear the screen after quitting a manual page.
 export MANPAGER='less -X';
+
+# Java 8
+export JAVA_HOME_8=$(/usr/libexec/java_home -v1.8)
+#export JAVA_HOME_11=$(/usr/libexec/java_home -v11)
+#export JAVA_HOME_14=$(/usr/libexec/java_home -v14)
+
+# If multiple Java versions installed, quicly switch between them
+export JAVA_HOME=$JAVA_HOME_8
