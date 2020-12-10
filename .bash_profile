@@ -39,8 +39,3 @@ fi;
 if command -v pyenv 1>/dev/null 2>&1; then
   eval "$(pyenv init -)"
 fi
-
-
-# DEPRECATED Install Homebrew -> brew install git bash-completion
-#source /usr/local/etc/bash_completion.d/git-completion.bash
-#GIT_PS1_SHOWDIRTYSTATE=true
