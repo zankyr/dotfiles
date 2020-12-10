@@ -2,8 +2,10 @@
 
 syntax enable
 set background=dark
-colorscheme solarized
 let g:solarized_termtrans=1
+let g:solarized_termcolors=256
+colorscheme solarized
+
 
 " Arrow keys does not insert strange chars
 set nocompatible
