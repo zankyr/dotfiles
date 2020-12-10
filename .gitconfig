@@ -15,3 +15,6 @@
 	added = yellow
 	changed = green
 	untracked = cyan
+[user]
+	name = rik
+	email = p3mal88@gmail.com

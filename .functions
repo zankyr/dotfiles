@@ -90,3 +90,10 @@ if [ $? -eq 0 ]; then
 		git diff --no-index --color-words "$@";
 	}
 fi;
+
+# Set the volume to 0 (mute) and then lock the screen.
+function afk() {
+	osascript -e "set Volume 0";
+	open -a ScreenSaverEngine;
+}
+

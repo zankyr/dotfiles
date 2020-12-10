@@ -1,8 +1,8 @@
 " Heavily inspired by https://github.com/mathiasbynens/dotfiles/blob/main/.vimrc
 
-"set background=dark
-"colorscheme solarized
-"let g:solarized_termtrans=1
+set background=dark
+colorscheme solarized
+let g:solarized_termtrans=1
 
 " Arrow keys does not insert strange chars
 set nocompatible
