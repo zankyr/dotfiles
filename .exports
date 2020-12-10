@@ -14,10 +14,13 @@ export HISTCONTROL='ignoreboth';
 
 # Highlight section titles in manual pages.
 export LESS_TERMCAP_md="${yellow}";
-
+ 
 # Don’t clear the screen after quitting a manual page.
 export MANPAGER='less -X';
 
+# Change grep color to green
+export GREP_COLOR='01;32';
+		
 # Java 8
 export JAVA_HOME_8=$(/usr/libexec/java_home -v1.8)
 #export JAVA_HOME_11=$(/usr/libexec/java_home -v11)
