@@ -1,5 +1,6 @@
 " Heavily inspired by https://github.com/mathiasbynens/dotfiles/blob/main/.vimrc
 
+syntax enable
 set background=dark
 colorscheme solarized
 let g:solarized_termtrans=1
