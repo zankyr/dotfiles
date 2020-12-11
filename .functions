@@ -97,3 +97,11 @@ function afk() {
 	open -a ScreenSaverEngine;
 }
 
+# Create a python virtual enviroment in the current folder and then execute it
+function pythonvenv() {
+	VENV='python39venv';
+	python -m venv $VENV;
+	source $VENV/bin/activate;
+	pip install wheel tavern;
+}
+
