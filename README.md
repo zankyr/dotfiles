@@ -3,6 +3,7 @@ Quickly configure your Mac.
 
 ## CAUTION
 **Use these scripts at your risk**
+
 These scripts will modify several configurations of your Mac, and will override existing files also. Before proceeding further, review the code and choose what configurations best suit you, removing what you don't need.
 
 ## Installation
@@ -34,7 +35,7 @@ This script will configure several MacOS settings (like screensaver and password
 
 ### Dotfiles
 
-To install the provided dotfiles in your systes, execute the bootstrapper script with the `install` option.
+To install the provided dotfiles in your system, execute the bootstrapper script with the `install` option.
 
 ```bash
 source bootstrap.sh --install
@@ -63,7 +64,7 @@ This task will read the `from-file.txt` in order to keep track of which files to
 * brew.sh -> install several [Homebrew](https://brew.sh/) formulae. Should be executed standalone.
 * .macos -> configure MacOs settings like TimeMachine, Dock and several others.
 * bootstrap.sh -> install all the dotfiles described below or update them (see section).
-* .aliases -> define usefule aliases for the terminal.
+* .aliases -> define useful aliases for the terminal.
 * .bash_profile -> compile all the dotfiles and define several other comodities (like bash completion and pyenv).
 * .bash_prompt -> configure the aspect (i.e. colors) for the terminal (and git also).
 * .exports -> define common exports variables.
@@ -75,7 +76,7 @@ This task will read the `from-file.txt` in order to keep track of which files to
 * .vim -> folder that contains working direcotries for vim (like backup and swap) and the theme configuration.
 * init -> contain the Solarized Theme for the Terminal app.
 * bin -> contain the [setleds](https://github.com/damieng/setledsmac) script.
-* f©-> list all the files and folders to syncronize (required for the bootstrap update command)
+* from-file -> list all the files and folders to syncronize (required for the bootstrap update command)
 
 ## Thanks to…
 
