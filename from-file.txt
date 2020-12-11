@@ -10,3 +10,5 @@
 .vimrc
 brew.sh
 .vim/
+bin/
+init/
