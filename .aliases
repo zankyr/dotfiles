@@ -64,3 +64,10 @@ alias egrep='egrep --color=auto'
 # IP addresses
 alias localip="ipconfig getifaddr en0"
 
+# Turn on/off external keyboard backlights.
+# see https://github.com/damieng/setledsmac
+alias lightson='setleds -v +caps +num +scroll -name "USB*"'
+alias lightsoff='setleds -v -caps -num -scroll -name "USB*"'
+
+
+
