@@ -1,0 +1,12 @@
+.aliases
+.bash_profile
+.bash_prompt
+.exports
+.functions
+.gitconfig
+.gitignore
+.hushlogin
+.macos
+.vimrc
+brew.sh
+.vim/

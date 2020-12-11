@@ -33,6 +33,9 @@ alias path='echo -e ${PATH//:/\\n}'
 # Edit bash_profile
 alias editprofile="vi ~/.bash_profile"
 
+# Edit host file
+alias edithost='sudo vi /etc/hosts'
+
 # Verbose mkdir, create intermediate directories
 alias mkdir="mkdir -pv"
 
