@@ -72,5 +72,8 @@ alias localip="ipconfig getifaddr en0"
 alias lightson='setleds -v +caps +num +scroll -name "USB*"'
 alias lightsoff='setleds -v -caps -num -scroll -name "USB*"'
 
+# Open current folder in Intellij IDEA
+alias idea="open -a /Applications/IntelliJ\ IDEA.app/ $1"
+
 
 
