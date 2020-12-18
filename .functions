@@ -98,10 +98,24 @@ function afk() {
 }
 
 # Create a python virtual enviroment in the current folder and then execute it
-function pythonvenv() {
+function pyvenv() {
 	VENV='python39venv';
 	python -m venv $VENV;
 	source $VENV/bin/activate;
+	#$VENV/bin/python -m pip install --upgrade pip
 	pip install wheel tavern;
+}
+
+# WORK PROJECTS/SHORCUT
+function resky-compile() {
+	mvn clean install -P local-env -f /Users/rik/dev/projects/sky-sso/ita-sso-resky/pom.xml;
+}
+
+function resky-test() {
+	(cd /Users/rik/dev/projects/ita-sso-resky/automation-tests && pyvenv && exec ./run_tests.sh);
+}
+
+function resky-logs() {
+	docker logs ita-sso-resky-webapp;
 }
 
