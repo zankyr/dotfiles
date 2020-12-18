@@ -71,6 +71,7 @@ alias localip="ipconfig getifaddr en0"
 # see https://github.com/damieng/setledsmac
 alias lightson='setleds -v +caps +num +scroll -name "USB*"'
 alias lightsoff='setleds -v -caps -num -scroll -name "USB*"'
+alias lon='lightson'
 
 # Open current folder in Intellij IDEA
 alias idea="open -a /Applications/IntelliJ\ IDEA.app/ $1"
