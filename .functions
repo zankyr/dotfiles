@@ -102,7 +102,7 @@ function pyvenv() {
 	VENV='python39venv';
 	python -m venv $VENV;
 	source $VENV/bin/activate;
-	#$VENV/bin/python -m pip install --upgrade pip
+	$VENV/bin/python -m pip install --upgrade pip
 	pip install wheel tavern;
 }
 
@@ -116,6 +116,5 @@ function resky-test() {
 }
 
 function resky-logs() {
-	docker logs ita-sso-resky-webapp;
-}
+	docker logs ita-sso-resky-webapp	}
 
