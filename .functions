@@ -116,5 +116,6 @@ function resky-test() {
 }
 
 function resky-logs() {
-	docker logs ita-sso-resky-webapp	}
+	docker logs ita-sso-resky-webapp	
+}
 

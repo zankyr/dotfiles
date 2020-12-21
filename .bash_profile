@@ -39,3 +39,14 @@ fi;
 if command -v pyenv 1>/dev/null 2>&1; then
   eval "$(pyenv init -)"
 fi
+
+# Enable tab completion for docker and docker compose
+if which brew &> /dev/null ; then
+	DOCKER_HOME=/Applications/Docker.app/Contents/Resources/etc
+	BREW_HOME="$(brew --prefix)/etc/bash_completion.d"
+	
+	for file in $DOCKER_HOME/{docker.bash-completion,docker-compose.bash-completion}; do
+		[ -r "$file" ] && [  -f "$file" ] && ln -Fs "$file" $BREW_HOME 
+	done;
+
+fi

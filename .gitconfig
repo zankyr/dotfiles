@@ -18,3 +18,5 @@
 [user]
 	name = rik
 	email = p3mal88@gmail.com
+[pull]
+	rebase = true

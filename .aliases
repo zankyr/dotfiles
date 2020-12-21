@@ -40,7 +40,10 @@ alias edithost='sudo vi /etc/hosts'
 alias mkdir="mkdir -pv"
 
 # Count of non-hidden files in current dir
-alias countfiles='echo $(ls -1 | wc -l)'      
+alias countfiles='echo $(ls -1 | wc -l)'
+
+# Docker
+alias d='docker'
 
 
 # Detect which `ls` flavor is in use
