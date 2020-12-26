@@ -98,16 +98,19 @@ function afk() {
 }
 
 # Create a python virtual enviroment in the current folder and then execute it
-function pyvenv() {
-	VENV='python39venv';
-	python -m venv $VENV;
-	source $VENV/bin/activate;
-	$VENV/bin/python -m pip install --upgrade pip
+function tavern-venv() {
+	pyenv virtualenvwrapper
+	mkvirtualenv tavern-venv
+	python -m pip install --upgrade pip
 	pip install wheel tavern;
 }
 
 # WORK PROJECTS/SHORCUT
 function resky-compile() {
+	# Remove all previous containers 
+	docker rm -f $(docker container ls -aq --filter "name=ita-sso-resky*");
+
+	# Install current branch
 	mvn clean install -P local-env -f /Users/rik/dev/projects/sky-sso/ita-sso-resky/pom.xml;
 }
 

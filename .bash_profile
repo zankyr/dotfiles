@@ -50,3 +50,8 @@ if which brew &> /dev/null ; then
 	done;
 
 fi
+
+# Enable pyenv-virtualenv
+if which pyenv-virtualenv-init > /dev/null; then 
+    eval "$(pyenv virtualenv-init -)"; 
+fi

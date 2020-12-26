@@ -31,3 +31,6 @@ export JAVA_HOME_8=$(/usr/libexec/java_home -v1.8)
 
 # If multiple Java versions installed, quicly switch between them
 export JAVA_HOME=$JAVA_HOME_8
+
+# Python virtualenvwrapper (see https://virtualenvwrapper.readthedocs.io/en/latest/install.html)
+export PYENV_VIRTUALENVWRAPPER_PREFER_PYVENV="true"

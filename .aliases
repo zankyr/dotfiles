@@ -45,6 +45,12 @@ alias countfiles='echo $(ls -1 | wc -l)'
 # Docker
 alias d='docker'
 
+# Docker - stop all the containers
+alias docker-stop='docker stop $(docker container ls -aq)'
+
+# Docker - remove all the containers, running ones too
+alias docker-remove-all='docker rm -f $(docker container ls -aq)'
+
 
 # Detect which `ls` flavor is in use
 if ls --color > /dev/null 2>&1; then # GNU `ls`
