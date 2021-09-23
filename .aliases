@@ -84,6 +84,3 @@ alias lon='lightson'
 
 # Open current folder in Intellij IDEA
 alias idea="open -a /Applications/IntelliJ\ IDEA.app/ $1"
-
-
-
