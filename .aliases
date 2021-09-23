@@ -83,4 +83,4 @@ alias lightsoff='setleds -v -caps -num -scroll -name "USB*"'
 alias lon='lightson'
 
 # Open current folder in Intellij IDEA
-alias idea="open -a /Applications/IntelliJ\ IDEA.app/ $1"
+alias idea="open -a /Applications/IntelliJ\ IDEA\ CE.app/ $1"
