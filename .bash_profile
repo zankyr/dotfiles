@@ -1,6 +1,6 @@
 # Load the shell dotfiles, and then some:
 # * ~/.path can be used to extend `$PATH`.
-for file in ~/.{path,bash_prompt,exports,aliases,functions,work}; do
+for file in ~/.{path,bash_prompt,exports,aliases,functions,work,work-resky}; do
     [ -r "$file" ] && [ -f "$file" ] && source "$file";
 done;
 unset file;
@@ -37,7 +37,7 @@ fi;
 
 # Init pyenv every time you open your prompt,
 if command -v pyenv 1>/dev/null 2>&1; then
-  eval "$(pyenv init -)"
+  eval "$(pyenv init --path)"
 fi
 
 # Enable tab completion for docker and docker compose

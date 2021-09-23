@@ -20,3 +20,7 @@
 	email = p3mal88@gmail.com
 [pull]
 	rebase = true
+[core]
+	autocrlf = input
+[alias]
+       lg = log --color --graph --pretty=format:'%Cred%h%Creset -%C(yellow)%d%Creset %s %Cgreen(%cr) %C(bold blue)<%an>%Creset' --abbrev-commit --branches
