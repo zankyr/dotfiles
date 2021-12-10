@@ -4,7 +4,7 @@
 .exports
 .functions
 .gitconfig
-.gitignore
+.gitignore_global
 .hushlogin
 .macos
 .vimrc

@@ -70,7 +70,7 @@ This task will read the `from-file.txt` in order to keep track of which files to
 * .exports -> define common exports variables.
 * .functions -> shortcuts that cannot be defined as simple aliases (like the extract command).
 * .gitconfig -> define colors for git statuses and other git configurations.
-* .gitignore -> git ignore file.
+* .gitignore_global -> global git ignore file
 * .hushlogin -> disable several messages in the terminale during the login phase.
 * .vimrc -> configurations for the vi text editor.
 * .vim -> folder that contains working direcotries for vim (like backup and swap) and the theme configuration.
