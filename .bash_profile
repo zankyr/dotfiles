@@ -38,6 +38,8 @@ fi;
 # Init pyenv every time you open your prompt,
 if command -v pyenv 1>/dev/null 2>&1; then
   eval "$(pyenv init --path)"
+  eval "$(pyenv init -)"
+  eval "$(pyenv virtualenv-init -)"
 fi
 
 # Enable tab completion for docker and docker compose

@@ -9,6 +9,6 @@
 .macos
 .vimrc
 brew.sh
-.vim/
 bin/
 init/
+.vim/
