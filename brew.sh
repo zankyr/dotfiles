@@ -19,10 +19,13 @@ ln -s "${BREW_PREFIX}/bin/gsha256sum" "${BREW_PREFIX}/bin/sha256sum"
 
 # Install some other useful utilities like `sponge`.
 brew install moreutils
+
 # Install GNU `find`, `locate`, `updatedb`, and `xargs`, `g`-prefixed.
 brew install findutils
+
 # Install GNU `sed`, overwriting the built-in `sed`.
 brew install gnu-sed
+
 # Install a modern version of Bash.
 brew install bash
 brew install bash-completion2
@@ -36,6 +39,9 @@ fi;
 # Install `wget` with IRI support.
 brew install wget
 
+# Install `tree`
+brew install tree
+
 # Install more recent versions of some macOS tools.
 brew install vim
 brew install grep
@@ -44,10 +50,9 @@ brew install openssh
 # Install other useful binaries.
 brew install git
 brew install git-lfs
-brew install tree
 
-# Install IntelliJ
-brew install --cask intellij-idea
+# Install IntelliJ CE
+brew install --cask intellij-idea-ce
 
 # Install maven
 brew install maven
@@ -62,6 +67,9 @@ brew install --cask adoptopenjdk8
 brew install pyenv
 pyenv install 3.9.0
 pyenv global 3.9.0
+
+# Install `Sublime` text editor
+brew install --cask sublime-text
 
 # Remove outdated versions from the cellar.
 brew cleanup
