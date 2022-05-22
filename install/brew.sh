@@ -3,9 +3,8 @@
 # Stop the script if any command fails
 set -e
 
-
 # check if `brew` is installed. If not, install it
-which brew
+which brew &> /dev/null
 
 if [[ $? != 0 ]] ; then
     echo "Homebrew not found, installing it..."
