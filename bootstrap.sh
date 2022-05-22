@@ -2,8 +2,6 @@
 
 cd "$(dirname "${BASH_SOURCE}")";
 
-#git pull origin main;
-
 function usage {
 	cat <<HELP_USAGE
 
@@ -21,12 +19,12 @@ HELP_USAGE
 
 # Copy all the files and folders to the home dir, then compile .bash_profile
 function install {
-	rsync --exclude ".git/" \
-		--exclude ".DS_Store" \
-		--exclude "bootstrap.sh" \
-		--exclude "README.md" \
-		-avh --no-perms . ~;
-	source ~/.bash_profile;
+
+	# Install Homebrew if missing
+	source ./install/brew.sh
+
+	# Copy all the required dotfiles to the home folder
+	
 }
 
 # Sync the expected files from the home dir to the current folder
@@ -42,7 +40,7 @@ function update {
 
 case $1 in 
 	"-i" | "--install" )
-	echo "INSTALL";
+	install
 	;;
 	"-u" | "--update" )
 	update
