@@ -24,7 +24,15 @@ function install {
 	source ./install/brew.sh
 
 	# Copy all the required dotfiles to the home folder
-	
+	#rsync --exclude ".git/" \
+	#	--exclude ".DS_Store" \
+	#	--exclude "bootstrap.sh" \
+	#	--exclude "README.md" \
+	#	-avh --no-perms . ~;
+	#source ~/.bash_profile;
+
+	# Install brew formulaes and casks
+	brew bundle --file=./install/Brewfile
 }
 
 # Sync the expected files from the home dir to the current folder

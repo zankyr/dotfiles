@@ -31,8 +31,9 @@ elif [ -f /etc/bash_completion ]; then
 fi;
 
 # Enable tab completion for `g` by marking it as an alias for `git`
-if type _git &> /dev/null; then
-    complete -o default -o nospace -F _git g;
+[[ -r "/usr/local/etc/profile.d/bash_completion.sh" ]] && . "/usr/local/etc/profile.d/bash_completion.sh"
+if type __git_complete &> /dev/null; then
+    __git_complete g git
 fi;
 
 # Init pyenv every time you open your prompt,

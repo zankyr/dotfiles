@@ -1,0 +1,53 @@
+# Heavily copied from https://github.com/mathiasbynens/dotfiles/blob/main/brew.sh
+# Install command-line tools using Homebrew bundle (https://github.com/Homebrew/homebrew-bundle).
+
+
+# Install GNU core utilities (those that come with macOS are outdated).
+# Don’t forget to add `$(brew --prefix coreutils)/libexec/gnubin` to `$PATH`.
+brew "coreutils"
+
+# Install some other useful utilities like `sponge`.
+brew "moreutils"
+
+# Install GNU `find`, `locate`, `updatedb`, and `xargs`, `g`-prefixed.
+brew "findutils"
+
+# Install GNU `sed`, overwriting the built-in `sed`.
+brew "gnu-sed"
+
+# Install a modern version of Bash.
+brew "bash"
+brew "bash-completion2"
+
+# Install `wget` with IRI support.
+brew "wget"
+
+# Install `tree`
+brew "tree"
+
+# Install more recent versions of some macOS tools.
+brew "vim"
+brew  "grep"
+brew  "openssh"
+
+# Install git
+brew "git"
+brew "git-lfs"
+
+# Install IntelliJ CE
+cask "intellij-idea-ce"
+
+# Install maven
+brew "maven"
+
+# Install docker desktop
+cask "docker"
+
+# Install openjdk 8
+cask "adoptopenjdk8"
+
+# Install pyenv, python and set it
+brew "pyenv"
+
+# Install `Sublime` text editor
+cask "sublime-text"
