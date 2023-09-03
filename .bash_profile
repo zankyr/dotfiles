@@ -1,6 +1,6 @@
 # Load the shell dotfiles, and then some:
 # * ~/.path can be used to extend `$PATH`.
-for file in ~/.{path,bash_prompt,exports,aliases,functions,work,work-resky}; do
+for file in ~/.{path,bash_prompt,exports,aliases,functions,work,work-resky,terns,exercism,work-etna}; do
     [ -r "$file" ] && [ -f "$file" ] && source "$file";
 done;
 unset file;
@@ -57,3 +57,13 @@ fi
 if which pyenv-virtualenv-init > /dev/null; then 
     eval "$(pyenv virtualenv-init -)"; 
 fi
+
+# REMOVED: jenv has several issues with maven when you install/switch Java version.
+# jenv configuration
+#export PATH="$HOME/.jenv/bin:$PATH"
+#eval "$(jenv init -)"
+
+
+# Configuration for https://github.com/nvbn/thefuck
+eval $(thefuck --alias)
+
