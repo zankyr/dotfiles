@@ -75,7 +75,7 @@ defaults write com.apple.finder QuitMenuItem -bool true
 # Finder: show all filename extensions
 defaults write NSGlobalDomain AppleShowAllExtensions -bool true
 
-# Finder: show status bar
+# Finder: show status bar (number of files in folder, etc.)
 defaults write com.apple.finder ShowStatusBar -bool true
 
 # Finder: show path bar
