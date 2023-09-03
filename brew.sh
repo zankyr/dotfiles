@@ -54,19 +54,25 @@ brew install git-lfs
 # Install IntelliJ CE
 brew install --cask intellij-idea-ce
 
+# Install IntelliJ
+brew install --cask intellij-idea
+
+# Install PyCharm
+brew install --cask pycharm
+
 # Install maven
-brew install maven
+#brew install maven
 
 # Install docker desktop
 brew install --cask docker
 
 # Install openjdk 8
-brew install --cask adoptopenjdk8
+#brew install --cask adoptopenjdk8
 
 # Install pyenv, python and set it
 brew install pyenv
-pyenv install 3.9.0
-pyenv global 3.9.0
+#pyenv install 3.9.0
+#pyenv global 3.9.0
 
 # Install `Sublime` text editor
 brew install --cask sublime-text
