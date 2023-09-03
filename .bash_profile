@@ -1,3 +1,6 @@
+# Add Homebrew in PATH - required since its original path has changed
+eval "$(/opt/homebrew/bin/brew shellenv)"
+
 # Load the shell dotfiles, and then some:
 # * ~/.path can be used to extend `$PATH`.
 for file in ~/.{path,bash_prompt,exports,aliases,functions,work,work-resky,terns,exercism,work-etna}; do
@@ -66,4 +69,6 @@ fi
 
 # Configuration for https://github.com/nvbn/thefuck
 eval $(thefuck --alias)
+
+
 
