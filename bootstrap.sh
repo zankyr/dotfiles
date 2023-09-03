@@ -42,7 +42,7 @@ function update {
 
 case $1 in 
 	"-i" | "--install" )
-	echo "INSTALL";
+	install
 	;;
 	"-u" | "--update" )
 	update
