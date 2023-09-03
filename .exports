@@ -25,12 +25,17 @@ export GREP_COLOR='01;32';
 export PATH="$HOME/bin:$PATH";
 		
 # Java 8
-export JAVA_HOME_8=$(/usr/libexec/java_home -v1.8)
+#export JAVA_HOME_8=$(/usr/libexec/java_home -v1.8)
 #export JAVA_HOME_11=$(/usr/libexec/java_home -v11)
-#export JAVA_HOME_14=$(/usr/libexec/java_home -v14)
+export JAVA_HOME_17=/Library/Java/JavaVirtualMachines/jdk-17.0.2.jdk/Contents/Home
 
 # If multiple Java versions installed, quicly switch between them
-export JAVA_HOME=$JAVA_HOME_8
+export JAVA_HOME=$JAVA_HOME_17
 
 # Python virtualenvwrapper (see https://virtualenvwrapper.readthedocs.io/en/latest/install.html)
 export PYENV_VIRTUALENVWRAPPER_PREFER_PYVENV="true"
+
+
+
+## Temporary fix for maven
+#export PATH="~/Downloads/apache-maven-3.8.4/bin:$PATH";
