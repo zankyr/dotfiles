@@ -19,11 +19,13 @@ git clone https://github.com/zankyr/dotfiles.git && cd dotfiles
 I like to install some common [Homebrew](https://brew.sh/) formulae (after installing Homebrew, of course):
 
 ```bash
-./brew.sh
+./brew/brew.sh
 ```
 
 Some of the functionality of following dotfiles depends on formulae installed by `brew.sh`. If you don’t plan to run `brew.sh`, you should look carefully through the script and manually install any particularly important ones. A good example is Bash/Git completion: the dotfiles use a special version from Homebrew.
 
+#### Extras
+If you want useful CLI tools or apps, look into `./brew/brew-extras.sh` and select what you like.
 
 ### MacOs settings
 
