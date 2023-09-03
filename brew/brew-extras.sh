@@ -37,3 +37,6 @@ brew install --cask spotify
 
 # Desktop client for Telegram messenger
 brew install --cask telegram-desktop
+
+# Move and resize windows using keyboard shortcuts or snap areas
+brew install --cask rectangle
