@@ -96,3 +96,49 @@ function afk() {
 	osascript -e "set Volume 0";
 	open -a ScreenSaverEngine;
 }
+
+# Open a specified folder in IntelliJ (CE or Ultimate)
+function idea() {
+	PATH_TO_OPEN=''
+	IS_CE=0
+	OPTIND=1
+	while getopts ":ch" opt; do
+		case "${opt}" in
+			c)
+				IS_CE=1
+				;;
+			*) 
+				cat<<HELP_USAGE
+
+Usage: idea [OPTIONS] [PATH]
+
+Open the specified PATH in IntelliJ Idea. If no PATH is specified, use current path.
+
+Options:
+  -c Open the Community Edition.
+  -h Print usage
+HELP_USAGE
+				return 1
+		esac
+	done
+
+	if [ "$IS_CE" = 1 ]; then
+		PATH_TO_OPEN="${2:-''}"
+		IDEA_APP_PATH="/Applications/IntelliJ IDEA CE.app/"
+	else
+		PATH_TO_OPEN="${1:-''}"
+		IDEA_APP_PATH="/Applications/IntelliJ IDEA.app/"
+	fi
+
+	open -a "$IDEA_APP_PATH" $PATH_TO_OPEN
+
+	#open -a "/Applications/IntelliJ IDEA.app/"
+
+	return 0
+}
+
+
+function what-the-port() {
+	echo "Looking for port ${1}..."
+	lsof -i -P | grep LISTEN | grep :$1
+}
