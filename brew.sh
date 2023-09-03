@@ -71,5 +71,11 @@ pyenv global 3.9.0
 # Install `Sublime` text editor
 brew install --cask sublime-text
 
+# Install 'bat', a nice replacement for cat (https://github.com/sharkdp/bat)
+brew install bat
+
+# Install 'The Fuck', a magnificent app that corrects errors in previous console commands (https://github.com/nvbn/thefuck)
+brew install thefuck
+
 # Remove outdated versions from the cellar.
 brew cleanup
