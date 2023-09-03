@@ -57,8 +57,8 @@ brew install --cask intellij-idea-ce
 # Install IntelliJ
 brew install --cask intellij-idea
 
-# Install PyCharm
-brew install --cask pycharm
+# Install PyCharm CE
+brew install --cask pycharm-ce
 
 # Install Visual Studio Code
 brew install --cask visual-studio-code
