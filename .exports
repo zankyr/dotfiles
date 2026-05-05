@@ -24,13 +24,7 @@ export GREP_COLOR='01;32';
 # Add `~/bin` to the `$PATH`
 export PATH="$HOME/bin:$PATH";
 		
-# Java 8
-#export JAVA_HOME_8=$(/usr/libexec/java_home -v1.8)
-#export JAVA_HOME_11=$(/usr/libexec/java_home -v11)
-export JAVA_HOME_17=/Library/Java/JavaVirtualMachines/jdk-17.0.2.jdk/Contents/Home
-
-# If multiple Java versions installed, quicly switch between them
-export JAVA_HOME=$JAVA_HOME_17
+export JAVA_HOME=$(/usr/libexec/java_home -v 17 2>/dev/null)
 
 # Python virtualenvwrapper (see https://virtualenvwrapper.readthedocs.io/en/latest/install.html)
 export PYENV_VIRTUALENVWRAPPER_PREFER_PYVENV="true"
