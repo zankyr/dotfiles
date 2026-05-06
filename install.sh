@@ -65,7 +65,7 @@ install_packages() {
     log "[dry-run] would run: brew bundle --file=$DOTFILES/Brewfile"
     return
   fi
-  brew bundle --file="$DOTFILES/Brewfile"
+  brew bundle -v --file="$DOTFILES/Brewfile"
 }
 
 stow_dotfiles() {
