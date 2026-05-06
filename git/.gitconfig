@@ -35,3 +35,5 @@
 	process = git-lfs filter-process
 [init]
 	defaultBranch = main
+[includeIf "gitdir:~/dev/klab/"]
+	path = ~/.gitconfig-work
