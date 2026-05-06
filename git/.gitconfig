@@ -25,8 +25,13 @@
 	excludesfile = ~/.gitignore_global
 [alias]
        lg = log --color --graph --pretty=format:'%Cred%h%Creset -%C(yellow)%d%Creset %s %Cgreen(%cr) %C(bold blue)<%an>%Creset' --abbrev-commit --branches
+       pl = pull
+       ps = push
+       s = status
 [filter "lfs"]
 	required = true
 	clean = git-lfs clean -- %f
 	smudge = git-lfs smudge -- %f
 	process = git-lfs filter-process
+[init]
+	defaultBranch = main
