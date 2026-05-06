@@ -1,23 +1,23 @@
 # CLI tools
+brew "bat"
 brew "coreutils"
-brew "moreutils"
 brew "findutils"
-brew "gnu-sed"
-brew "wget"
-brew "tree"
-brew "vim"
-brew "grep"
-brew "openssh"
 brew "git"
 brew "git-lfs"
-brew "bat"
+brew "gnu-sed"
+brew "grep"
+brew "moreutils"
+brew "openssh"
 brew "thefuck"
+brew "tree"
+brew "vim"
+brew "wget"
 brew "wifi-password"
 
 # Dotfiles & environment
-brew "stow"
 brew "mise"
 brew "starship"
+brew "stow"
 
 # Apps
 cask "docker"
