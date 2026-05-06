@@ -1,5 +1,5 @@
-.DS_Store
-*.swp
 *.swo
-.idea/
+*.swp
 .claude/
+.DS_Store
+.idea/
