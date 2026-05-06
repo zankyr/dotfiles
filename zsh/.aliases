@@ -1,5 +1,3 @@
-#!/usr/bin/env bash
-
 # Heavily inspired by https://github.com/mathiasbynens/dotfiles/blob/main/.aliases
 
 # Easier navigation: .., ..., ...., ....., ~ and -
@@ -31,7 +29,7 @@ alias f="open -a Finder ."
 alias path='echo -e ${PATH//:/\\n}'
 
 # Edit bash_profile
-alias editprofile="vi ~/.bash_profile"
+alias editprofile="vi ~/.zshrc"
 
 # Edit host file
 alias edithost='sudo vi /etc/hosts'
