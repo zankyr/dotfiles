@@ -1,86 +1,62 @@
 # Rik's dotfiles
-Quickly configure your Mac.
 
-## CAUTION
-**Use these scripts at your risk**
+Quickly configure a fresh macOS development environment.
 
-These scripts will modify several configurations of your Mac, and will override existing files also. Before proceeding further, review the code and choose what configurations best suit you, removing what you don't need.
+## Caution
+
+**Use these scripts at your own risk.**
+
+These scripts will modify system configurations and overwrite existing files. Review the code and remove anything that doesn't suit your setup before running.
 
 ## Installation
 
-Clone the repository wherever you want and then choose what installation execute. You'll find details for each installation in the following sections.
+Clone the repository and run the installer:
 
 ```bash
-git clone https://github.com/zankyr/dotfiles.git && cd dotfiles
+git clone https://github.com/zankyr/dotfiles.git ~/.dotfiles
+cd ~/.dotfiles
+./install.sh
 ```
 
-### Homebrew formulae
+The installer will, in order:
 
-I like to install some common [Homebrew](https://brew.sh/) formulae (after installing Homebrew, of course):
+1. Install [Homebrew](https://brew.sh/) if not already present
+2. Install all packages and apps from `Brewfile`
+3. Symlink all dotfiles into `$HOME` via [GNU Stow](https://www.gnu.org/software/stow/)
+4. Apply macOS system defaults (`.macos`)
+5. Set zsh as the default shell
+
+To preview what would happen without making any changes:
 
 ```bash
-./brew/brew.sh
+./install.sh --dry-run
 ```
 
-Some of the functionality of following dotfiles depends on formulae installed by `brew.sh`. If you don’t plan to run `brew.sh`, you should look carefully through the script and manually install any particularly important ones. A good example is Bash/Git completion: the dotfiles use a special version from Homebrew.
+## Structure
 
-#### Extras
-If you want useful CLI tools or apps, look into `./brew/brew-extras.sh` and select what you like.
+Files are organised into [Stow](https://www.gnu.org/software/stow/) packages. Each directory maps directly to `$HOME`:
 
-### MacOs settings
-
-This script will configure several MacOS settings (like screensaver and password request after a stop). Just execute it. Be careful that after the execution, several applications will be closed to update their configurations.
-
-```bash
-./.macos
+```
+zsh/        → ~/.zshrc, ~/.zshenv, ~/.aliases, ~/.functions, ~/.hushlogin
+git/        → ~/.gitconfig, ~/.gitignore_global
+vim/        → ~/.vimrc, ~/.vim/
+starship/   → ~/.config/starship.toml
+mise/       → ~/.config/mise/config.toml
+macos/      → run directly by install.sh (not symlinked)
 ```
 
-### Dotfiles
+Running `stow <package>` from the repo root creates the symlinks. Running `stow -D <package>` removes them.
 
-To install the provided dotfiles in your system, execute the bootstrapper script with the `install` option.
+## Customisation
 
-```bash
-source bootstrap.sh --install
-```
-or
+- **Packages and apps** — edit `Brewfile` and run `brew bundle`
+- **Shell config** — edit files under `zsh/`
+- **Prompt** — edit `starship/.config/starship.toml`
+- **Runtime versions** (Java, etc.) — edit `mise/.config/mise/config.toml`
+- **macOS settings** — edit `macos/.macos`
 
-```bash
-source bootstrap.sh -i
-```
+Because Stow uses symlinks, editing a file in `$HOME` (e.g. `~/.aliases`) is the same as editing it in the repo — no sync step needed.
 
-This command will pull in the latest version and copy the files to your home folder.
-
-To synchronize your current configurations to the repository (e.g. you added new aliases or functions and you don't want to search what files you modified), execute the script using the `update` option:
-```bash
-source bootstrap.sh --update
-```
-or
-
-```bash
-source bootstrap.sh -u
-```
-This task will read the `from-file.txt` in order to keep track of which files to update, and then will sync them from your home directory to the repository folder.
-
-
-## Content
-* brew.sh -> install several [Homebrew](https://brew.sh/) formulae. Should be executed standalone.
-* .macos -> configure MacOs settings like TimeMachine, Dock and several others.
-* bootstrap.sh -> install all the dotfiles described below or update them (see section).
-* .aliases -> define useful aliases for the terminal.
-* .bash_profile -> compile all the dotfiles and define several other comodities (like bash completion and pyenv).
-* .bash_prompt -> configure the aspect (i.e. colors) for the terminal (and git also).
-* .exports -> define common exports variables.
-* .functions -> shortcuts that cannot be defined as simple aliases (like the extract command).
-* .gitconfig -> define colors for git statuses and other git configurations.
-* .gitignore_global -> global git ignore file
-* .hushlogin -> disable several messages in the terminale during the login phase.
-* .vimrc -> configurations for the vi text editor.
-* .vim -> folder that contains working direcotries for vim (like backup and swap) and the theme configuration.
-* init -> contain the Solarized Theme for the Terminal app.
-* bin -> contain the [setleds](https://github.com/damieng/setledsmac) script.
-* from-file -> list all the files and folders to syncronize (required for the bootstrap update command)
-
-## Thanks to…
+## Thanks to
 
 * [Mathias Bynens](https://mathiasbynens.be/) and his [dotfiles repository](https://github.com/mathiasbynens/dotfiles)
-* [Damien Guard](https://damieng.com/) for the [backlight script repository](https://github.com/damieng/setledsmac)
