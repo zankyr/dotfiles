@@ -19,9 +19,18 @@ Options:
 EOF
 }
 
-log()  { echo "  $*"; }
-step() { echo; echo "==> $*"; }
-warn() { echo "  [warn] $*" >&2; }
+BOLD='\033[1m'
+RESET='\033[0m'
+BLUE='\033[0;34m'
+GREEN='\033[0;32m'
+YELLOW='\033[0;33m'
+RED='\033[0;31m'
+CYAN='\033[0;36m'
+
+log()  { echo -e "  ${GREEN}✔${RESET}  $*"; }
+step() { echo; echo -e "${BOLD}${BLUE}==> $*${RESET}"; }
+warn() { echo -e "  ${YELLOW}⚠${RESET}  $*" >&2; }
+error(){ echo -e "  ${RED}✖${RESET}  $*" >&2; }
 
 stow_flags() {
   local flags=(--dir="$DOTFILES" --target="$HOME")
@@ -118,11 +127,11 @@ main() {
     case "$arg" in
       --dry-run)   DRY_RUN=true ;;
       -h|--help)   usage; exit 0 ;;
-      *)           echo "Unknown option: $arg"; usage; exit 1 ;;
+      *)           error "Unknown option: $arg"; usage; exit 1 ;;
     esac
   done
 
-  $DRY_RUN && echo "(dry-run mode — no changes will be made)"
+  $DRY_RUN && echo -e "${CYAN}(dry-run mode — no changes will be made)${RESET}"
 
   install_homebrew
   install_packages
@@ -131,8 +140,8 @@ main() {
   set_default_shell
 
   echo
-  echo "Done."
-  $DRY_RUN && echo "(dry-run: nothing was actually changed)"
+  echo -e "${BOLD}${GREEN}Done.${RESET}"
+  $DRY_RUN && echo -e "${CYAN}(dry-run: nothing was actually changed)${RESET}"
 }
 
 main "$@"
