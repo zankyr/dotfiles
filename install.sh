@@ -86,6 +86,20 @@ stow_dotfiles() {
   done
 }
 
+trust_mise_config() {
+  step "mise trust"
+  if ! command -v mise &>/dev/null; then
+    warn "mise not found, skipping"
+    return
+  fi
+  if $DRY_RUN; then
+    log "[dry-run] would run: mise trust $DOTFILES/mise/.config/mise/config.toml"
+    return
+  fi
+  mise trust "$DOTFILES/mise/.config/mise/config.toml"
+  log "mise config trusted"
+}
+
 apply_macos_defaults() {
   step "macOS defaults"
   local macos_script="$DOTFILES/macos/.macos"
@@ -136,8 +150,9 @@ main() {
   install_homebrew
   install_packages
   stow_dotfiles
-  apply_macos_defaults
-  set_default_shell
+  trust_mise_config
+#  apply_macos_defaults
+#  set_default_shell
 
   echo
   echo -e "${BOLD}${GREEN}Done.${RESET}"
