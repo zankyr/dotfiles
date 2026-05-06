@@ -22,7 +22,7 @@
 	rebase = true
 [core]
 	autocrlf = input
-	excludesfile = /Users/rik/.gitignore_global
+	excludesfile = ~/.gitignore_global
 [alias]
        lg = log --color --graph --pretty=format:'%Cred%h%Creset -%C(yellow)%d%Creset %s %Cgreen(%cr) %C(bold blue)<%an>%Creset' --abbrev-commit --branches
 [filter "lfs"]
