@@ -1,0 +1,4 @@
+# Runtime versions are managed per-project via .mise.toml in each project root.
+# Add global tools here only for runtimes needed everywhere, e.g.:
+# [tools]
+# node = "lts"
