@@ -151,8 +151,8 @@ main() {
   install_packages
   stow_dotfiles
   trust_mise_config
-#  apply_macos_defaults
-#  set_default_shell
+  apply_macos_defaults
+  set_default_shell
 
   echo
   echo -e "${BOLD}${GREEN}Done.${RESET}"
