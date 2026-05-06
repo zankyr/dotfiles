@@ -1,3 +1,6 @@
+# Inserts a blank line between shell prompts
+add_newline = true
+
 [directory]
 truncation_length = 3
 truncate_to_repo = true
@@ -23,5 +26,6 @@ min_time = 2000
 format = "took [$duration]($style) "
 
 [character]
-success_symbol = "[❯](bold green)"
+#success_symbol = "[❯](bold green)"
+success_symbol = '[➜](bold green)'
 error_symbol = "[❯](bold red)"
