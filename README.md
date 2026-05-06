@@ -23,8 +23,9 @@ The installer will, in order:
 1. Install [Homebrew](https://brew.sh/) if not already present
 2. Install all packages and apps from `Brewfile`
 3. Symlink all dotfiles into `$HOME` via [GNU Stow](https://www.gnu.org/software/stow/)
-4. Apply macOS system defaults (`.macos`)
-5. Set zsh as the default shell
+4. Trust the mise config (required because the file is a symlink outside `$HOME`)
+5. Apply macOS system defaults (`.macos`)
+6. Set zsh as the default shell
 
 To preview what would happen without making any changes:
 
@@ -52,7 +53,7 @@ Running `stow <package>` from the repo root creates the symlinks. Running `stow 
 - **Packages and apps** — edit `Brewfile` and run `brew bundle`
 - **Shell config** — edit files under `zsh/`
 - **Prompt** — edit `starship/.config/starship.toml`
-- **Runtime versions** (Java, etc.) — edit `mise/.config/mise/config.toml`
+- **Runtime versions** (Java, etc.) — managed per-project via `.mise.toml` in each project root; add global tools to `mise/.config/mise/config.toml`
 - **macOS settings** — edit `macos/.macos`
 
 Because Stow uses symlinks, editing a file in `$HOME` (e.g. `~/.aliases`) is the same as editing it in the repo — no sync step needed.
